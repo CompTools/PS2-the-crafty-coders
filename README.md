@@ -19,6 +19,8 @@ The goal of this project is to write a Bash script that:
 1. Counts the number of flights that were delayed more than 15 minutes into or out of Gainesville, FL (airport code GNV) during the timeframe covered by the dataset. (*2 points*)
 2. Produces a table (text is fine) with the data to fill in this table (*13 points*):
 
+Trying to add comment from command line.
+
 
 GNV to: | Total flights | Total flights delayed (>15min) | Total flights delayed due to Weather
 --------|---------------|------------------------|-------------------------------
