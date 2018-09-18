@@ -19,7 +19,7 @@ The goal of this project is to write a Bash script that:
 1. Counts the number of flights that were delayed more than 15 minutes into or out of Gainesville, FL (airport code GNV) during the timeframe covered by the dataset. (*2 points*)
 
 test, test, test 123, adding from command line.
-Can we add from Atom?
+Edit in Atom git commands on CLI?
 
 
 2. Produces a table (text is fine) with the data to fill in this table (*13 points*):
