@@ -6,6 +6,12 @@ Solutions
 cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","ATL"' | wc -l >> GNVtoATLtotal.txt Answer: 1476
 cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","CLT"' | wc -l >> GNVtoCLTtotal.txt Answer: 476
 cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","MIA"' | wc -l >> GNVtoMIAtotal.txt Answer: 205
+cat flights.May2017-Apr2018.csv | grep ""GNV","ATL"" | cut -d "," -f1,2,3,4 | grep 1.00 | wc -l Answer: 310
+cat flights.May2017-Apr2018.csv | grep ""GNV","CLT"" | cut -d "," -f1,2,3,4 | grep 1.00 | wc -l Answer: 118
+cat flights.May2017-Apr2018.csv | grep ""GNV","MIA"" | cut -d "," -f1,2,3,4 | grep 1.00 | wc -l Answer: 36
+cat flights.May2017-Apr2018.csv | grep ""GNV","ATL"" | cut -d "," -f1,2,5 | grep -v 0.00 | grep .00 | wc -l Answer: 13
+cat flights.May2017-Apr2018.csv | grep ""GNV","CLT"" | cut -d "," -f1,2,5 | grep -v 0.00 | grep .00 | wc -l Answer: 2
+cat flights.May2017-Apr2018.csv | grep ""GNV","MIA"" | cut -d "," -f1,2,5 | grep -v 0.00 | grep .00 | wc -l Answer: 0
 
 3.cat flights.May2017-Apr2018.csv | grep -i "***" | cut -d "," -f 3 | sort -u >> airportcodes.txt 
 
