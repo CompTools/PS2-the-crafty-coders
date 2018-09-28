@@ -23,12 +23,12 @@ read -p "Please Input "
 #this is for the three letter code
      if [[ "$REPLY" =~ ^[a-zA-Z]${3} ]]; then 
         echo -e "The number of delayed flights to or from $REPLY is:"
-        grep -w "$Reply" cat /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
+        grep -w "$Reply" /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
         
 #For city, state name
      elif [[ $REPLY =~ ^[a-zA-Z]\,[a-zA-Z]{2}$ ]]; then
         echo -e "The number of delayed flights to or from $REPLY is:"
-        grep -w cat /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
+        grep -w /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
 #invalid input
      else
           invalid_input >&2
