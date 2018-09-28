@@ -1,0 +1,37 @@
+#!/bin/bash 
+
+clear 
+echo "
+  Please input: 
+  #. Three Letter Airport Code
+  or
+  #. City, State Name
+  or
+  #. "Quit" to Exit
+  " 
+invalid_input () { 
+  echo "Invalid input '$REPLY'" >&2 
+  exit 1 
+} 
+
+read -p "Please Input " 
+     if [[ "$REPLY" == Quit ]]; then
+     echo "Exit."
+     exit 
+     
+     fi
+#this is for the three letter code
+     if [[ "$REPLY" =~ ^[a-zA-Z]${3}]]; then 
+        echo -e "The number of delayed flights to or from $REPLY is:"
+        grep -w "$Reply" cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
+        
+#For city, state name
+     elif [[ $REPLY =~ ^[a-zA-Z]\,[a-zA-Z]{2}$ ]]; then
+        echo -e "The number of delayed flights to or from $REPLY is:"
+        grep -w cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
+#invalid input
+     else
+          invalid_input >&2
+          exit
+     fi
+      
