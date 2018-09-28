@@ -28,7 +28,7 @@ read -p "Please Input "
 #For city, state name
      elif [[ $REPLY =~ ^[a-zA-Z]\,[a-zA-Z]{2}$ ]]; then
         echo -e "The number of delayed flights to or from $REPLY is:"
-        grep -w cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
+        grep -w cat /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l
 #invalid input
      else
           invalid_input >&2
