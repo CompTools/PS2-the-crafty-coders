@@ -2,7 +2,10 @@ Solutions
 
 1.cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV | grep 1.00 | wc -l >> GNVdel15.txt
 
-2. cat flights.May2017-Apr2018.csv | /ufrc/zoo6927/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep GNV
+2.
+cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","ATL"' | wc -l >> GNVtoATLtotal.txt Answer: 1476
+cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","CLT"' | wc -l >> GNVtoCLTtotal.txt Answer: 476
+cat flights.May2017-Apr2018.csv | cut -d "," -f 3,7,13,16,24 | grep '"GNV","MIA"' | wc -l >> GNVtoMIAtotal.txt Answer: 205
 
 3.cat flights.May2017-Apr2018.csv | grep -i "***" | cut -d "," -f 3 | sort -u >> airportcodes.txt 
 
